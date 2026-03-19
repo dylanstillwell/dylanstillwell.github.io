@@ -12,14 +12,16 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:      #f9f8f6;
-      --surface: #ffffff;
-      --ink:     #1a1a18;
-      --muted:   #6b6b67;
-      --accent:  #2d6a4f;
-      --rule:    #e4e3df;
-      --radius:  6px;
-      --max:     860px;
+      --bg:        #0e0f0e;
+      --bg-raised: #141614;
+      --surface:   #1a1c1a;
+      --border:    #252825;
+      --ink:       #e8ebe6;
+      --muted:     #8a9186;
+      --accent:    #4ade80;
+      --accent-dim:#2d6a4f;
+      --radius:    6px;
+      --max:       860px;
     }
 
     html { scroll-behavior: smooth; }
@@ -39,9 +41,9 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(249,248,246,0.88);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--rule);
+      background: rgba(14,15,14,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
       padding: 0 2rem;
       display: flex;
       align-items: center;
@@ -64,26 +66,26 @@
     }
 
     .nav-links a {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 400;
       color: var(--muted);
       text-decoration: none;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       transition: color 0.2s;
     }
 
-    .nav-links a:hover { color: var(--ink); }
+    .nav-links a:hover { color: var(--accent); }
 
     /* ── Layout ── */
     main { max-width: var(--max); margin: 0 auto; padding: 0 2rem; }
 
     section {
       padding: 6rem 0;
-      border-bottom: 1px solid var(--rule);
+      border-bottom: 1px solid var(--border);
       opacity: 0;
       transform: translateY(24px);
-      transition: opacity 0.55s ease, transform 0.55s ease;
+      transition: opacity 0.6s ease, transform 0.6s ease;
     }
 
     section.visible { opacity: 1; transform: none; }
@@ -91,9 +93,9 @@
 
     /* ── Typography ── */
     .section-label {
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 500;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--accent);
       margin-bottom: 1.5rem;
@@ -105,12 +107,20 @@
       font-weight: 400;
       line-height: 1.1;
       letter-spacing: -0.02em;
-      margin-bottom: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: var(--ink);
     }
 
     h1 em {
       font-style: italic;
+      color: var(--accent);
+    }
+
+    .hero-aside {
+      font-size: 0.88rem;
       color: var(--muted);
+      font-style: italic;
+      margin-bottom: 1.75rem;
     }
 
     h2 {
@@ -118,23 +128,23 @@
       font-size: 2rem;
       font-weight: 400;
       margin-bottom: 1.5rem;
+      color: var(--ink);
     }
 
     h3 {
       font-size: 1rem;
       font-weight: 500;
       margin-bottom: 0.4rem;
+      color: var(--ink);
     }
 
     p { color: var(--muted); max-width: 56ch; }
-
-    a { color: var(--accent); }
 
     /* ── Hero ── */
     #about { padding-top: 7rem; }
 
     .hero-sub {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       color: var(--muted);
       max-width: 52ch;
       margin-bottom: 2.5rem;
@@ -142,18 +152,18 @@
 
     .hero-cta {
       display: inline-block;
-      padding: 0.65rem 1.5rem;
-      background: var(--ink);
-      color: #fff;
+      padding: 0.65rem 1.6rem;
+      background: var(--accent);
+      color: #0e0f0e;
       text-decoration: none;
       font-size: 0.85rem;
       font-weight: 500;
       letter-spacing: 0.04em;
       border-radius: var(--radius);
-      transition: background 0.2s, transform 0.15s;
+      transition: opacity 0.2s, transform 0.15s;
     }
 
-    .hero-cta:hover { background: var(--accent); transform: translateY(-1px); }
+    .hero-cta:hover { opacity: 0.85; transform: translateY(-1px); }
 
     /* ── Projects ── */
     .projects-grid {
@@ -165,7 +175,7 @@
 
     .project-card {
       background: var(--surface);
-      border: 1px solid var(--rule);
+      border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 1.75rem;
       text-decoration: none;
@@ -177,21 +187,20 @@
     }
 
     .project-card:hover {
-      border-color: var(--accent);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      border-color: var(--accent-dim);
+      box-shadow: 0 0 0 1px var(--accent-dim), 0 8px 32px rgba(0,0,0,0.4);
       transform: translateY(-2px);
     }
 
-    .project-card h3 { color: var(--ink); }
-    .project-card p  { font-size: 0.9rem; margin: 0; }
+    .project-card p { font-size: 0.9rem; margin: 0; }
 
     .project-tag {
       display: inline-block;
       margin-top: auto;
       padding-top: 0.75rem;
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 500;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--accent);
     }
@@ -205,41 +214,42 @@
     }
 
     .skill-group h3 {
-      font-size: 0.8rem;
+      font-size: 0.72rem;
       font-weight: 500;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 0.75rem;
+      color: var(--accent);
+      margin-bottom: 0.9rem;
     }
 
     .skill-list {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 0.4rem;
+      gap: 0.5rem;
     }
 
     .skill-list li {
       font-size: 0.95rem;
       color: var(--ink);
-      font-weight: 400;
-      padding-left: 1rem;
+      font-weight: 300;
+      padding-left: 1.1rem;
       position: relative;
     }
 
     .skill-list li::before {
-      content: '—';
+      content: '›';
       position: absolute;
       left: 0;
-      color: var(--rule);
+      color: var(--accent-dim);
+      font-weight: 400;
     }
 
     /* ── Contact ── */
     .contact-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 0.9rem;
       margin-top: 2rem;
     }
 
@@ -248,25 +258,25 @@
       align-items: center;
       gap: 0.5rem;
       padding: 0.6rem 1.25rem;
-      border: 1px solid var(--rule);
+      border: 1px solid var(--border);
       border-radius: var(--radius);
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 400;
-      color: var(--ink);
+      color: var(--muted);
       background: var(--surface);
       transition: border-color 0.2s, color 0.2s;
     }
 
-    .contact-link:hover { border-color: var(--accent); color: var(--accent); }
+    .contact-link:hover { border-color: var(--accent-dim); color: var(--accent); }
 
     /* ── Footer ── */
     footer {
       max-width: var(--max);
       margin: 0 auto;
       padding: 2rem;
-      font-size: 0.8rem;
-      color: var(--muted);
+      font-size: 0.78rem;
+      color: var(--border);
     }
 
     /* ── Responsive ── */
@@ -296,10 +306,9 @@
     <section id="about">
       <p class="section-label">About</p>
       <h1>Hi, I'm <br /><em>Dylan Stillwell.</em></h1>
+      <p class="hero-aside">This site exists because having one is professional, and honestly, I just wanted to make something.</p>
       <p class="hero-sub">
         Electrical Engineering student at the University of Tennessee, Knoxville.
-        I'm drawn to the intersection of hardware and software — from circuit analysis
-        to embedded systems — and I care about building things that actually work.
       </p>
       <a class="hero-cta" href="#contact">Get in touch</a>
     </section>
@@ -308,7 +317,7 @@
     <section id="projects">
       <p class="section-label">Projects</p>
       <h2>Things I've built</h2>
-      <p>A selection of academic and personal projects. Add links to your GitHub repos as you go.</p>
+      <p>A selection of academic and personal projects.</p>
 
       <div class="projects-grid">
 
@@ -350,15 +359,6 @@
         </div>
 
         <div class="skill-group">
-          <h3>Engineering</h3>
-          <ul class="skill-list">
-            <li>Circuit Analysis</li>
-            <li>Signals &amp; Systems</li>
-            <li>Technical Documentation</li>
-          </ul>
-        </div>
-
-        <div class="skill-group">
           <h3>Foundations</h3>
           <ul class="skill-list">
             <li>Mathematics</li>
@@ -375,8 +375,8 @@
       <p class="section-label">Contact</p>
       <h2>Let's connect</h2>
       <p>
-        Open to internships, research opportunities, or just talking shop.
-        My inbox is always open.
+        Whether it's an internship, a research opportunity, or something you think
+        I'd find interesting — feel free to reach out. I check my email.
       </p>
 
       <div class="contact-links">
@@ -393,7 +393,6 @@
   </footer>
 
   <script>
-    // Hero is visible immediately — no waiting for scroll
     document.querySelector('#about').classList.add('visible');
 
     const observer = new IntersectionObserver(
