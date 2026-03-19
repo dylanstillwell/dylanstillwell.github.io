@@ -17,13 +17,12 @@
 
     :root {
       --bg:        #0c0d0c;
-      --bg-raised: #111211;
       --surface:   #161816;
       --border:    #222422;
       --border-hi: #2d6a4f;
-      --ink:       #dfe8db;
-      --muted:     #7a8a76;
-      --faint:     #3a4238;
+      --ink:       #e6ede2;
+      --muted:     #a8b8a2;
+      --faint:     #4a5a46;
       --accent:    #4ade80;
       --radius:    5px;
       --max:       820px;
@@ -63,7 +62,6 @@
       font-style: italic;
       color: var(--accent);
       text-decoration: none;
-      letter-spacing: 0.01em;
     }
 
     .nav-links {
@@ -139,7 +137,7 @@
       font-family: 'Fraunces', serif;
       font-size: 1.9rem;
       font-weight: 300;
-      margin-bottom: 0.6rem;
+      margin-bottom: 1rem;
       color: var(--ink);
       letter-spacing: -0.01em;
     }
@@ -152,7 +150,7 @@
       color: var(--ink);
     }
 
-    p { color: var(--muted); max-width: 54ch; }
+    p { color: var(--muted); }
 
     /* ── Hero ── */
     #about { padding-top: 6.5rem; }
@@ -161,16 +159,44 @@
       font-size: 0.8rem;
       color: var(--faint);
       font-style: italic;
-      margin-bottom: 2rem;
+      margin-bottom: 2.25rem;
       max-width: 48ch;
     }
 
-    .hero-sub {
-      font-size: 0.98rem;
-      color: var(--muted);
-      max-width: 50ch;
+    .hero-bio {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
       margin-bottom: 2.75rem;
-      line-height: 1.7;
+      max-width: 54ch;
+    }
+
+    .hero-bio p {
+      font-size: 0.94rem;
+      line-height: 1.75;
+      color: var(--muted);
+    }
+
+    .hero-bio p strong {
+      color: var(--ink);
+      font-weight: 400;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.25rem;
+    }
+
+    .tag {
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--border-hi);
+      border-radius: 3px;
+      padding: 0.2rem 0.55rem;
     }
 
     .hero-cta {
@@ -194,7 +220,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
       gap: 1rem;
-      margin-top: 2.25rem;
+      margin-top: 2rem;
     }
 
     .project-card {
@@ -238,7 +264,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
       gap: 2.5rem;
-      margin-top: 2.25rem;
+      margin-top: 2rem;
     }
 
     .skill-group-label {
@@ -337,9 +363,28 @@
       <p class="section-label">About</p>
       <h1>Hi, I'm <br /><em>Dylan Stillwell.</em></h1>
       <p class="hero-aside">This site exists because having one is professional, and honestly, I just wanted to make something.</p>
-      <p class="hero-sub">
-        Electrical Engineering student at the University of Tennessee, Knoxville.
-      </p>
+
+      <div class="hero-bio">
+        <p>
+          I'm an <strong>Electrical Engineering student at UTK</strong>, but I got here the long way.
+          From 2018 to 2022 I served in the U.S. Army as a
+          <strong>paratrooper and wheeled-vehicle mechanic</strong> — the kind of work that teaches
+          you to think clearly under pressure and fix things with whatever you have.
+        </p>
+        <p>
+          After leaving the military, I hiked the
+          <strong>Pacific Crest Trail</strong> — all 2,650 miles of it — before starting school.
+          That kind of trip has a way of clarifying what you actually want to do with your time.
+          For me, it's engineering.
+        </p>
+
+        <div class="tag-row">
+          <span class="tag">U.S. Army · 2018–2022</span>
+          <span class="tag">PCT Thru-hiker · 2022</span>
+          <span class="tag">EE @ UTK</span>
+        </div>
+      </div>
+
       <a class="hero-cta" href="#contact">Get in touch</a>
     </section>
 
