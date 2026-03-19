@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name — Portfolio</title>
+  <title>Dylan Stillwell — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -12,14 +12,14 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:       #f9f8f6;
-      --surface:  #ffffff;
-      --ink:      #1a1a18;
-      --muted:    #6b6b67;
-      --accent:   #2d6a4f;
-      --rule:     #e4e3df;
-      --radius:   6px;
-      --max:      860px;
+      --bg:      #f9f8f6;
+      --surface: #ffffff;
+      --ink:     #1a1a18;
+      --muted:   #6b6b67;
+      --accent:  #2d6a4f;
+      --rule:    #e4e3df;
+      --radius:  6px;
+      --max:     860px;
     }
 
     html { scroll-behavior: smooth; }
@@ -267,8 +267,6 @@
       padding: 2rem;
       font-size: 0.8rem;
       color: var(--muted);
-      display: flex;
-      justify-content: space-between;
     }
 
     /* ── Responsive ── */
@@ -277,14 +275,13 @@
       .nav-links { gap: 1.25rem; }
       main { padding: 0 1.25rem; }
       section { padding: 4rem 0; }
-      footer { flex-direction: column; gap: 0.5rem; }
     }
   </style>
 </head>
 <body>
 
   <nav>
-    <a class="nav-name" href="#about">Your Name</a>
+    <a class="nav-name" href="#about">Dylan Stillwell</a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
@@ -298,10 +295,11 @@
     <!-- ── About ── -->
     <section id="about">
       <p class="section-label">About</p>
-      <h1>Hi, I'm <br /><em>Your Name.</em></h1>
+      <h1>Hi, I'm <br /><em>Dylan Stillwell.</em></h1>
       <p class="hero-sub">
-        A student passionate about [your field]. I build things, learn constantly,
-        and care about craft. Currently studying [your major] at [your university].
+        Electrical Engineering student at the University of Tennessee, Knoxville.
+        I'm drawn to the intersection of hardware and software — from circuit analysis
+        to embedded systems — and I care about building things that actually work.
       </p>
       <a class="hero-cta" href="#contact">Get in touch</a>
     </section>
@@ -310,26 +308,26 @@
     <section id="projects">
       <p class="section-label">Projects</p>
       <h2>Things I've built</h2>
-      <p>A selection of personal and academic projects I've worked on.</p>
+      <p>A selection of academic and personal projects. Add links to your GitHub repos as you go.</p>
 
       <div class="projects-grid">
 
         <a class="project-card" href="#" target="_blank" rel="noopener">
           <h3>Project One</h3>
-          <p>A short description of what this project does and why you built it.</p>
-          <span class="project-tag">Python · Data</span>
+          <p>Describe what you built, what problem it solved, and what you learned from it.</p>
+          <span class="project-tag">C++ · Embedded</span>
         </a>
 
         <a class="project-card" href="#" target="_blank" rel="noopener">
           <h3>Project Two</h3>
-          <p>A short description of what this project does and why you built it.</p>
-          <span class="project-tag">HTML · CSS · JS</span>
+          <p>Describe what you built, what problem it solved, and what you learned from it.</p>
+          <span class="project-tag">MATLAB · Simulation</span>
         </a>
 
         <a class="project-card" href="#" target="_blank" rel="noopener">
           <h3>Project Three</h3>
-          <p>A short description of what this project does and why you built it.</p>
-          <span class="project-tag">Research · Writing</span>
+          <p>Describe what you built, what problem it solved, and what you learned from it.</p>
+          <span class="project-tag">Circuit Design · Analysis</span>
         </a>
 
       </div>
@@ -343,32 +341,29 @@
       <div class="skills-groups">
 
         <div class="skill-group">
-          <h3>Languages</h3>
+          <h3>Programming</h3>
           <ul class="skill-list">
-            <li>Python</li>
-            <li>JavaScript</li>
-            <li>HTML / CSS</li>
-            <li>Skill Four</li>
-          </ul>
-        </div>
-
-        <div class="skill-group">
-          <h3>Tools</h3>
-          <ul class="skill-list">
+            <li>C++</li>
+            <li>MATLAB</li>
             <li>Git / GitHub</li>
-            <li>VS Code</li>
-            <li>Tool Three</li>
-            <li>Tool Four</li>
           </ul>
         </div>
 
         <div class="skill-group">
-          <h3>Other</h3>
+          <h3>Engineering</h3>
           <ul class="skill-list">
-            <li>Technical Writing</li>
-            <li>Research</li>
-            <li>Skill Three</li>
-            <li>Skill Four</li>
+            <li>Circuit Analysis</li>
+            <li>Signals &amp; Systems</li>
+            <li>Technical Documentation</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>Foundations</h3>
+          <ul class="skill-list">
+            <li>Mathematics</li>
+            <li>Physics</li>
+            <li>Problem Solving</li>
           </ul>
         </div>
 
@@ -380,37 +375,32 @@
       <p class="section-label">Contact</p>
       <h2>Let's connect</h2>
       <p>
-        I'm always open to new opportunities, collaborations, or just a good conversation.
-        Reach out — I'll get back to you.
+        Open to internships, research opportunities, or just talking shop.
+        My inbox is always open.
       </p>
 
       <div class="contact-links">
-        <a class="contact-link" href="mailto:you@email.com">
-          ✉ Email
-        </a>
-        <a class="contact-link" href="https://github.com/yourusername" target="_blank" rel="noopener">
-          ⌥ GitHub
-        </a>
-        <a class="contact-link" href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">
-          ↗ LinkedIn
-        </a>
+        <a class="contact-link" href="mailto:dylanstillwell@pm.me">✉ dylanstillwell@pm.me</a>
+        <a class="contact-link" href="https://github.com/yourusername" target="_blank" rel="noopener">⌥ GitHub</a>
+        <a class="contact-link" href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">↗ LinkedIn</a>
       </div>
     </section>
 
   </main>
 
   <footer>
-    <span>© 2026 Your Name</span>
-    <span>Built with plain HTML</span>
+    <span>© 2026 Dylan Stillwell</span>
   </footer>
 
   <script>
-    // Scroll-reveal
+    // Hero is visible immediately — no waiting for scroll
+    document.querySelector('#about').classList.add('visible');
+
     const observer = new IntersectionObserver(
       (entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
       { threshold: 0.08 }
     );
-    document.querySelectorAll('section').forEach(s => observer.observe(s));
+    document.querySelectorAll('section:not(#about)').forEach(s => observer.observe(s));
   </script>
 
 </body>
